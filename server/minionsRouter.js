@@ -2,13 +2,11 @@ const express = require('express');
 const minionsRouter = express.Router();
 
 const {
-    createMeeting,
     getAllFromDatabase,
     getFromDatabaseById,
     addToDatabase,
     updateInstanceInDatabase,
     deleteFromDatabasebyId,
-    deleteAllFromDatabase
 } = require('./db');
 
 minionsRouter.get('/', (req, res, next) => {
@@ -21,7 +19,7 @@ minionsRouter.post('/', (req, res, next) => {
     res.status(202).send(newMinion);
 });
 
-minionsRouter.param('/:minionId', (req, res, next, id) => {
+minionsRouter.param('minionId', (req, res, next, id) => {
     const minion = getFromDatabaseById('minions', id);
 
     if(minion) {

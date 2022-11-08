@@ -270,6 +270,5 @@ module.exports = {
   addToDatabase,
   updateInstanceInDatabase,
   deleteFromDatabasebyId,
-  deleteAllFromDatabase,
-  findDataArrayByName
+  deleteAllFromDatabase
 };

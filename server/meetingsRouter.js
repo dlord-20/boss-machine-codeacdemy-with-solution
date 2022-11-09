@@ -7,20 +7,25 @@ const {
     deleteAllFromDatabase
 } = require('./db');
 
+meetingsRouter.use('/', (req, res, next) => {
+    const allMeetings = getAllFromDatabase('meetings');
+    req.meetings = allMeetings;
+    next();
+})
+
 meetingsRouter.get('/', (req, res, next) => {
-    const meetings = getAllFromDatabase('meetings');
-    res.send(meetings);
+    res.status(200).send(req.meetings);
 });
 
 meetingsRouter.post('/', (req, res, next) => {
     const newMeeting = createMeeting();
-    req.allMeetings.push(newMeeting);
+    req.meetings.push(newMeeting);
     res.status(201).send(newMeeting);
 
 });
 
 meetingsRouter.delete('/', (req, res, next) => {
-    const deleted = deleteAllFromDatabase();
+    const deleted = deleteAllFromDatabase('meetings');
     if(deleted) {
         res.status(204);
     } else {

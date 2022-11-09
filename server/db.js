@@ -270,5 +270,6 @@ module.exports = {
   addToDatabase,
   updateInstanceInDatabase,
   deleteFromDatabasebyId,
-  deleteAllFromDatabase
+  deleteAllFromDatabase,
+  createWork
 };

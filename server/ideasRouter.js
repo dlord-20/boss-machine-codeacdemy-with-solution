@@ -44,9 +44,9 @@ ideasRouter.put('/:ideaId', (req, res, next) => {
 ideasRouter.delete('/:ideaId', (req, res, next) => {
     const deleted = deleteFromDatabasebyId('ideas', req.id);
     if(deleted) {
-        res.status(500);
+        res.status(204);
     } else {
-        res.status(404);
+        res.status(500);
     }
     res.send();
 });

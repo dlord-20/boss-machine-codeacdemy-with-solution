@@ -22,9 +22,9 @@ meetingsRouter.post('/', (req, res, next) => {
 meetingsRouter.delete('/', (req, res, next) => {
     const deleted = deleteAllFromDatabase();
     if(deleted) {
-        res.status(500);
+        res.status(204);
     } else {
-        res.status(404);
+        res.status(500);
     }
     res.send();
     

@@ -31,7 +31,7 @@ minionsRouter.param('minionId', (req, res, next, id) => {
     }
 
 });
-//Im coming back to this and will restart it next week -> What a crazy friday
+//Im coming back to this and will restart it next week -> What a crazy friday -> Might do something
 
 minionsRouter.get('/:minionId', (req, res, next) => {
     res.status(200).send(req.minion);

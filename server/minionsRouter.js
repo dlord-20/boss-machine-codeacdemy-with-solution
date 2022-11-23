@@ -31,7 +31,7 @@ minionsRouter.param('minionId', (req, res, next, id) => {
     }
 
 });
-//Im coming back to this and will restart it next week -> What a crazy friday -> Might do something -> I actually will come back and code this project again after I take some time away (will be better for me with a bigger gap) -> get it -> that was close -> OAuth Time! -> Back end feature testing practice -> Primary program -> bought a car? -We got a car now -> Hello world -> getting into SQL finally
+//Im coming back to this and will restart it next week -> What a crazy friday -> Might do something -> I actually will come back and code this project again after I take some time away (will be better for me with a bigger gap) -> get it -> that was close -> OAuth Time! -> Back end feature testing practice -> Primary program -> bought a car? -We got a car now -> Hello world -> getting into SQL finally -> Now here we go
 
 
 minionsRouter.get('/:minionId', (req, res, next) => {
